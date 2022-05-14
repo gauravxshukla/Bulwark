@@ -1,0 +1,29 @@
+{
+    "name": "Smart Touch Key",
+    "version": "1.3",
+    "description": "Login to websites just by using your fingerprint!",
+    "permissions": [
+    "activeTab", "tabs", "nativeMessaging"
+ 	],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+   	{
+   		"matches": [
+     	"<all_urls>"
+   		],
+   		"js": ["jquery-3.3.1.min.js" ,"content.js"]
+   	}
+	],
+    "browser_action": {
+    "default_title": "Smart Touch Key", 
+    "default_popup": "popup.html"
+	},
+    "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png"
+    },
+    "manifest_version": 2
+}
